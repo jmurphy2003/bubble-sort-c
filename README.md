@@ -1,42 +1,67 @@
 # Bubble Sort in C
 
-# Overview
+## Overview
 This program sorts an array of 9 integers using the bubble sort algorithm.
 It uses pointers, pass-by-reference, arrays, and functions.
-The array is printed before sorting, after each swap, and after sorting.
+The array is printed before sorting, after each swap, and after sorting. 
 
-# Functions
+The program prints the array:  
+- Before sorting  
+- After every swap (so you can see how the numbers move around)  
+- After sorting  
 
-# printValues(int* array)
-Input: Pointer to integer array  
-Output: Prints array  
-Return: None  
+---
 
-Steps:
-1. Print '['
-2. Loop through array
-3. Print each value
-4. Print ']'
+## Functions
 
-# swap(int* a, int* b)
-Input: Pointers to two integers  
-Output: Values swapped in memory  
-Return: None  
+### printValues(int* array)
+**Input:** Pointer to the array  
+**Output:** Prints the array in a single line with brackets  
+**Return:** None  
 
-Steps:
-1. Create temp variable
-2. temp = *a
-3. *a = *b
-4. *b = temp
+**How it works:**  
+1. Print `'['`  
+2. Loop through the array from index 0 to MAX-1  
+3. Print each number followed by a space  
+4. Print `']'` and a newline  
 
-# sort(int* array)
-Input: Pointer to integer array  
-Output: Sorted array  
-Return: None  
+---
 
-Steps:
-1. Loop i from 0 to MAX-1
-2. Loop j from 0 to MAX-2-i
-3. Compare array[j] and array[j+1]
-4. Swap if needed
-5. Print array after swap
+### swap(int* a, int* b)
+**Input:** Pointers to two integers  
+**Output:** Swaps the values in memory  
+**Return:** None  
+
+**How it works:**  
+1. Create a temporary variable `temp`  
+2. Set `temp = *a`  
+3. Set `*a = *b`  
+4. Set `*b = temp`  
+
+---
+
+### sort(int* array)
+**Input:** Pointer to the array  
+**Output:** Sorts the array using bubble sort  
+**Return:** None  
+
+**How it works:**  
+1. Outer loop `i` goes from 0 to MAX-1 (number of passes)  
+2. Inner loop `j` goes from 0 to MAX-2-i (comparing each pair)  
+3. Compare `array[j]` and `array[j+1]`  
+4. If `array[j] > array[j+1]`, call `swap(&array[j], &array[j+1])`  
+5. Call `printValues(array)` after each swap so I can see the array changing  
+
+---
+
+### main()
+**Input:** None  
+**Output:** Runs the program  
+**Return:** 0  
+
+**What I did in main:**  
+1. Created the array `{7,3,9,4,6,1,2,8,5}`  
+2. Printed `"Before:"` and the array  
+3. Tested the swap function with `x = 3` and `y = 5`  
+4. Called `sort(array)`  
+5. Printed `"After:"` and the sorted array  
