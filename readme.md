@@ -2,7 +2,7 @@
 
 ## Overview
 This program sorts an array of 9 integers using the bubble sort algorithm.
-It demonstrates pointers, pass-by-reference, arrays, and functions in C.
+It uses pointers, pass-by-reference, arrays, and functions.
 The array is printed before sorting, after each swap, and after sorting.
 
 ## Functions
@@ -44,4 +44,3 @@ Steps:
 3. Compare array[j] and array[j+1]
 4. Swap if needed
 5. Print array after swap
-
