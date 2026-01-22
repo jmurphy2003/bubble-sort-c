@@ -7,7 +7,7 @@ The array is printed before sorting, after each swap, and after sorting.
 
 The program prints the array:  
 - Before sorting  
-- After every swap (so you can see how the numbers move around)  
+- After every swap  
 - After sorting  
 
 ---
